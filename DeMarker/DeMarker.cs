@@ -30,7 +30,7 @@ namespace cAlgo
 
         #region Params
 
-        [Parameter(NAME + " " + VERSION, Group = "Identity", DefaultValue = "https://ctrader.guru/product/demarker/")]
+        [Parameter(NAME + " " + VERSION, Group = "Identity", DefaultValue = "https://www.google.com/search?q=ctrader+guru+demarker")]
         public string ProductInfo { get; set; }
 
         [Parameter("Periods", Group = "Params", DefaultValue = 14)]
