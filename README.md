@@ -1,4 +1,4 @@
-# DeMarker
-Meglio della RSI, un 10 e lode al suo inventore
+# Demarker
 
-[Pagina ufficiale](https://ctrader.guru/product/demarker/)
+
+[Find more indicators, cbots and tools](https://ctrader-guru.github.io)

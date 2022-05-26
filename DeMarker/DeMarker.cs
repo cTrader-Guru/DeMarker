@@ -20,29 +20,16 @@ namespace cAlgo
     public class DeMarker : Indicator
     {
 
-        #region Enums
-
-        #endregion
-
         #region Identity
 
-        /// <summary>
-        /// Nome del prodotto, identificativo, da modificare con il nome della propria creazione
-        /// </summary>
         public const string NAME = "DeMarker";
 
-        /// <summary>
-        /// La versione del prodotto, progressivo, utilie per controllare gli aggiornamenti se viene reso disponibile sul sito ctrader.guru
-        /// </summary>
         public const string VERSION = "1.0.2";
 
         #endregion
 
         #region Params
 
-        /// <summary>
-        /// Identità del prodotto nel contesto di ctrader.guru
-        /// </summary>
         [Parameter(NAME + " " + VERSION, Group = "Identity", DefaultValue = "https://ctrader.guru/product/demarker/")]
         public string ProductInfo { get; set; }
 
@@ -68,13 +55,9 @@ namespace cAlgo
 
         #region Indicator Events
 
-        /// <summary>
-        /// Viene generato all'avvio dell'indicatore, si inizializza l'indicatore
-        /// </summary>
         protected override void Initialize()
         {
 
-            // --> Stampo nei log la versione corrente
             Print("{0} : {1}", NAME, VERSION);
 
             DemarkerMin = CreateDataSeries();
@@ -84,10 +67,6 @@ namespace cAlgo
 
         }
 
-        /// <summary>
-        /// Generato ad ogni tick, vengono effettuati i calcoli dell'indicatore
-        /// </summary>
-        /// <param name="index">L'indice della candela in elaborazione</param>
         public override void Calculate(int index)
         {
 
@@ -120,12 +99,6 @@ namespace cAlgo
             Result[index] = DemarkerMAmax.Result[index] / (DemarkerMAmax.Result[index] + DemarkerMAmin.Result[index]);
 
         }
-
-        #endregion
-
-        #region Private Methods
-
-        // --> Seguiamo la signature con underscore "_mioMetodo()"
 
         #endregion
 
